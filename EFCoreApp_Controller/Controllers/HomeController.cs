@@ -1,8 +1,9 @@
 ﻿using System.Diagnostics;
 using EFCoreApp_Model.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
-namespace EFCoreApp.Controllers;
+namespace EFCoreApp_Controller.Controllers;
 
 public class HomeController : Controller
 {
