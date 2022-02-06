@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
-
-namespace EFCoreApp_DataAccess.Entities;
+namespace EFCoreApp_Model.Models;
 ///Books to Author Many to Many
 public class Author
 {

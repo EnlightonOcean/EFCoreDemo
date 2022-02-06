@@ -1,4 +1,4 @@
-namespace EFCoreApp_DataAccess.Entities;
+namespace EFCoreApp_Model.Models;
 public class Genre
 {
     public int Id { get; set; }

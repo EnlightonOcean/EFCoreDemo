@@ -46,7 +46,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Book", b =>
@@ -83,7 +83,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasIndex("PublisherId");
 
-                    b.ToTable("Books");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.BookAuthor", b =>
@@ -98,7 +98,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("BookAuthors");
+                    b.ToTable("BookAuthors", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.BookDetail", b =>
@@ -120,24 +120,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BookDetails");
-                });
-
-            modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
+                    b.ToTable("BookDetails", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Fluent_Author", b =>
@@ -164,7 +147,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Fluent_Authors");
+                    b.ToTable("Fluent_Authors", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Fluent_Book", b =>
@@ -200,7 +183,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasIndex("PublisherId");
 
-                    b.ToTable("Fluent_Books");
+                    b.ToTable("Fluent_Books", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Fluent_BookAuthor", b =>
@@ -215,7 +198,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Fluent_BookAuthor");
+                    b.ToTable("Fluent_BookAuthor", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Fluent_BookDetail", b =>
@@ -237,7 +220,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Fluent_BookDetails");
+                    b.ToTable("Fluent_BookDetails", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Fluent_Publisher", b =>
@@ -258,7 +241,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Fluent_Publishers");
+                    b.ToTable("Fluent_Publishers", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Genre", b =>
@@ -278,7 +261,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genres");
+                    b.ToTable("Genres", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Publisher", b =>
@@ -299,7 +282,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Publishers");
+                    b.ToTable("Publishers", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.TestAuthor", b =>
@@ -326,7 +309,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TestAuthors");
+                    b.ToTable("TestAuthors", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.TestBook", b =>
@@ -357,7 +340,24 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TestBooks");
+                    b.ToTable("TestBooks", (string)null);
+                });
+
+            modelBuilder.Entity("EFCoreApp_Model.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("TestAuthorTestBook", b =>
@@ -372,7 +372,7 @@ namespace EFCoreApp_DataAccess.Data.Migrations
 
                     b.HasIndex("BooksId");
 
-                    b.ToTable("TestAuthorTestBook");
+                    b.ToTable("TestAuthorTestBook", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Book", b =>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreApp_DataAccess.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220204002109_AddRawCategories")]
-    partial class AddRawCategories
+    [Migration("20220204213628_AddCategory")]
+    partial class AddCategory
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -123,23 +123,6 @@ namespace EFCoreApp_DataAccess.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("BookDetails");
-                });
-
-            modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("EFCoreApp_DataAccess.Entities.Fluent_Author", b =>
@@ -360,6 +343,23 @@ namespace EFCoreApp_DataAccess.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TestBooks");
+                });
+
+            modelBuilder.Entity("EFCoreApp_Model.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("TestAuthorTestBook", b =>

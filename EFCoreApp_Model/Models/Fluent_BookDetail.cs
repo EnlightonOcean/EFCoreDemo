@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace EFCoreApp_DataAccess.Entities;
+namespace EFCoreApp_Model.Models;
 public class Fluent_BookDetail
 {
     public int Id { get; set; }

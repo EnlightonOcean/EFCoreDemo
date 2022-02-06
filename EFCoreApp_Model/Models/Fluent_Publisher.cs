@@ -1,4 +1,4 @@
-namespace EFCoreApp_DataAccess.Entities;
+namespace EFCoreApp_Model.Models;
 //Publisher to Book one to many
 public class Fluent_Publisher
 {

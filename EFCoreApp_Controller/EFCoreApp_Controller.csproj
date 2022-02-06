@@ -2,10 +2,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EFCoreApp_Model\EFCoreApp_Model.csproj" />
+    <ProjectReference Include="..\EFCoreApp_DataAccess\EFCoreApp_DataAccess.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
   </ItemGroup>
 

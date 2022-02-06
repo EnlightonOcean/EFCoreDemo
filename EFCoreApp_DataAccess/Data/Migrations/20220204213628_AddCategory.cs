@@ -4,7 +4,7 @@
 
 namespace EFCoreApp_DataAccess.Data.Migrations
 {
-    public partial class AddCategories : Migration
+    public partial class AddCategory : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,6 +20,9 @@ namespace EFCoreApp_DataAccess.Data.Migrations
                 {
                     table.PrimaryKey("PK_Categories", x => x.Id);
                 });
+                migrationBuilder.Sql("Insert into Categories values('Cat 1')");
+                migrationBuilder.Sql("Insert into Categories values('Cat 2')");
+                migrationBuilder.Sql("Insert into Categories values('Cat 3')");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

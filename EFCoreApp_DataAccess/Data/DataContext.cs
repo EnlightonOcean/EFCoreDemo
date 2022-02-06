@@ -1,5 +1,5 @@
 using EFCoreApp_DataAccess.Data.FluentConfig;
-using EFCoreApp_DataAccess.Entities;
+using EFCoreApp_Model.Models;
 using Microsoft.EntityFrameworkCore;
 namespace EFCoreApp_DataAccess.Data;
 public class DataContext: DbContext
