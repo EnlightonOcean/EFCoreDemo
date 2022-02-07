@@ -25,5 +25,5 @@ dotnet tool install -g Microsoft.Web.LibraryManager.Cli
 
 libman Init
 libman install jquery --provider cdnjs --destination wwwroot\scripts\jquery --files jquery.min.js
-libman install jqueryui -p cdnjs -d wwwroot/lib/jqueryui/dist --files jquery-ui.min.js
-libman 
+libman install jqueryui -p cdnjs -d wwwroot/lib/jqueryui/dist/js --files jquery-ui.min.js
+libman install jqueryui -p cdnjs -d wwwroot/lib/jqueryui/dist/css --files jquery-ui.min.css
